@@ -92,16 +92,18 @@ const galleryListeners = async () => {
       main.insertBefore(sugestion, gallery);
     }
     input.value = ""
-    
   })
 }
 
 export const printTemplate = async () => {
   document.querySelector("main").innerHTML = galleryTemplate()
   galleryListeners()
+  const images = await searchPhotos("gatos");
+  printItems(images.response.results)
 }
 
 printTemplate()
+
 
 
 // FOOTER

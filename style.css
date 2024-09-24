@@ -48,12 +48,13 @@ header {
   align-items: center;
   padding: 0 2rem;
   gap: 1.5rem;
+
 }
 
 header > h1 {
   background-color: var(--logo);
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 50%;
@@ -79,23 +80,28 @@ header button:hover {
   background-color: var(--secondary);
 }
 
-header .icon {
-  filter: contrast(30%);
-}
-
 header .profileimg {
   border-radius: 50%;
   height: 40px;
   width: 40px;
 }
 
+
 /* GALLERY STYLES */
+main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .gallery {
-  padding: 0 1rem;
+  width: 100%;
+  padding: 1rem;
   display: grid;
   grid-auto-rows: 200px;
   gap: 1rem;
-  grid-auto-flow: row dense;
+  grid-auto-flow: row;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
 }
 
 h2 {
@@ -103,26 +109,49 @@ h2 {
   text-align: center;
 }
 
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
   .gallery {
     grid-template-columns: repeat(1, fr);
   }
-}
+} */
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 756px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+  header > h1 {
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+  }
 
-@media screen and (min-width: 992px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
+  header .profileimg {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  }
+  .searchbtn, .darkmodebtn {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+  }
+  header img {
+    height: 18px;
+    width: 18px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+}
+
+
+/* @media screen and (min-width: 1200px) {
   .gallery {
     grid-template-columns: repeat(6, 1fr);
   }
-}
+}  */
+
