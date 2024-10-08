@@ -5,6 +5,7 @@
   background-size: cover;
   border-radius: 2rem;
   overflow: hidden;
+  background-position: center;
 }
 
 .gallery-item > div {
@@ -34,7 +35,7 @@
   justify-content: space-between;
 }
 
- .gallery-item button {
+.gallery-item button {
   padding: 1rem 1.4rem;
   border-radius: 2rem;
   border: none;

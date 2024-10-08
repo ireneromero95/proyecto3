@@ -15,7 +15,7 @@
 body {
   background-color: var(--color-background);
   color: var(--primary);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .dark {
@@ -48,7 +48,6 @@ header {
   align-items: center;
   padding: 0 2rem;
   gap: 1.5rem;
-
 }
 
 header > h1 {
@@ -86,10 +85,13 @@ header .profileimg {
   width: 40px;
 }
 
-
+#busqueda {
+  display: flex;
+  flex-direction: row;
+}
 /* GALLERY STYLES */
-main{
-  display:flex;
+main {
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
@@ -109,15 +111,9 @@ h2 {
   text-align: center;
 }
 
-/* @media screen and (min-width: 576px) {
-  .gallery {
-    grid-template-columns: repeat(1, fr);
-  }
-} */
-
 @media screen and (max-width: 756px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   header > h1 {
     width: 20px;
@@ -125,48 +121,36 @@ h2 {
     font-size: 15px;
   }
 
-  header .profileimg {
-  display: none;
-  }
   .searchbtn {
     border-radius: 50%;
     height: 40;
     width: 10px;
   }
 
-  .darkmodebtn{
+  .profileimg {
     display: none;
   }
+
+  .darkmodebtn {
+    display: none;
+  }
+
   header img {
     height: 18px;
     width: 18px;
   }
-  header{
+
+  header {
+    display: flex;
     flex-direction: column;
   }
 
-
-header input {
-  padding: 1rem 1.4rem;
-  border-radius: 2rem;
-  width: 200px;
-  background-color: var(--secondary);
-  border: none;
-  font-size: 1rem;
-}
-}
-
-@media screen and (max-width: 1200px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-    width: 100%;
+  header input {
+    padding: 1rem 1.4rem;
+    border-radius: 2rem;
+    width: 200px;
+    background-color: var(--secondary);
+    border: none;
+    font-size: 1rem;
   }
 }
-
-
-/* @media screen and (min-width: 1200px) {
-  .gallery {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}  */
-
